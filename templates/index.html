@@ -39,6 +39,41 @@
           </nav>
           <div class="alert alert-success" role="alert">
             Willkommen bei der Oberstufenverwaltung deiner Schule. Hier kannst du neue Kurse hinzufügen und im Nachhinein bearbeiten. 
-          </div>          
+          </div> 
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Name des Kurses:</label>
+              <input type="Name" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Art des Kurses:</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>--</option>
+                <option>LK</option>
+                <option>GK</option>
+                <option>ZK</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Kursschiene:</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>--</option>
+                <option>I Schiene</option>
+                <option>II Schiene</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Lehrkraft:</label>
+              <input type="Name" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Anmerkungen:</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+          </form>
+          <p class="buttons">
+            <button type="button" class="btn btn-primary btn-lg btn-block"><i class="bi bi-file-earmark-arrow-up"></i> Speichern</button>  
+            <button type="button" class="btn btn-secondary btn-lg btn-block"><i class="bi bi-arrow-repeat"></i> Zurücksetzten</button>  
+          </p>        
     </body>
 </html>
