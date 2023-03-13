@@ -10,6 +10,10 @@ Bootstrap = Bootstrap(app)
 def index():
     return render_template('index.html', title= 'Verwaltung')
 
+@app.route("/konto")
+def konto():
+    return render_template('konto.html', title= 'Verwaltung')
+
 if __name__ == '__main__':
     app.run(debug=True)
     
