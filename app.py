@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
@@ -6,8 +6,23 @@ Bootstrap = Bootstrap(app)
 
 @app.route("/")
 
-@app.route("/index")
+@app.route("/index", methods=['POST'])
 def index():
+    if request.method == 'POST':
+        kurs = request.form['kurs']
+        art = request.form['art']
+        schiene = request.form['schiene']
+        lehrer = request.form['lehrer']
+        anmerkungen = request.form['anmerkungen']
+    return render_template('index.html', title= 'Verwaltung')
+
+@app.route("/gespeichert", methods=["POST"])
+def gespeichert():
+    return render_template('index.html', title= 'Verwaltung')
+
+
+@app.route("/reset")
+def reset():
     return render_template('index.html', title= 'Verwaltung')
 
 @app.route("/konto")
