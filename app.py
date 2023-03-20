@@ -1,8 +1,10 @@
+import sqlite3
 from flask import Flask, render_template, request
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 Bootstrap = Bootstrap(app)
+connection = sqlite3.connect('kursverwaltung.db')
 
 @app.route("/")
 
@@ -32,3 +34,6 @@ def konto():
 if __name__ == '__main__':
     app.run(debug=True)
     
+connection.execute()
+connection.commit()
+connection.close()
